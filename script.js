@@ -1,15 +1,14 @@
-/* =================================
-   AURORA - JAVASCRIPT
-================================= */
 
-// Mensaje en consola
+
 console.log("Mental Health");
 
-// Animación sencilla al aparecer las secciones
+const animatedElements = document.querySelectorAll(
+    ".section, .quote-section, .instagram-section"
+);
 
-const sections = document.querySelectorAll(".section");
 
 const observer = new IntersectionObserver(
+
     (entries) => {
 
         entries.forEach((entry) => {
@@ -23,13 +22,16 @@ const observer = new IntersectionObserver(
         });
 
     },
+
     {
-        threshold: 0.15
+        threshold: 0.12
     }
+
 );
 
-sections.forEach((section) => {
 
-    observer.observe(section);
+animatedElements.forEach((element) => {
+
+    observer.observe(element);
 
 });
