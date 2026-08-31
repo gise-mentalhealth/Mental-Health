@@ -1,1 +1,427 @@
+/* =================================
+   CONFIGURACIÓN GENERAL
+================================= */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f8f7f4;
+    color: #303030;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =================================
+   NAVEGACIÓN
+================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    background: rgba(248, 247, 244, 0.95);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav a {
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    opacity: 0.55;
+}
+
+
+/* =================================
+   BOTONES
+================================= */
+
+.button {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.primary {
+    background: #303030;
+    color: white;
+}
+
+.primary:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
+
+.secondary {
+    border: 1px solid #303030;
+}
+
+.secondary:hover {
+    background: #303030;
+    color: white;
+}
+
+
+/* =================================
+   HERO
+================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 10% 80px;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(180, 190, 170, 0.35),
+            transparent 35%
+        ),
+        #f8f7f4;
+}
+
+.hero-content {
+    max-width: 720px;
+}
+
+.eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+
+    margin-bottom: 15px;
+
+    opacity: 0.6;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+
+    font-weight: 700;
+}
+
+.hero-text {
+    max-width: 600px;
+
+    font-size: 1.15rem;
+
+    margin-bottom: 35px;
+
+    opacity: 0.75;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+
+/* =================================
+   SECCIONES
+================================= */
+
+.section {
+    padding: 110px 10%;
+}
+
+.section-title {
+    max-width: 700px;
+
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+
+/* =================================
+   SOBRE MÍ
+================================= */
+
+.about {
+    background: #eeece7;
+}
+
+.about-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+}
+
+.image-placeholder {
+    width: min(400px, 100%);
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #d8d6cf;
+
+    border-radius: 50%;
+
+    font-size: 1.2rem;
+
+    opacity: 0.6;
+}
+
+.about-text h3 {
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+
+    opacity: 0.75;
+}
+
+
+/* =================================
+   SERVICIOS
+================================= */
+
+.services {
+    background: #f8f7f4;
+}
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.service-card {
+    padding: 40px 30px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+}
+
+.service-icon {
+    display: block;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    opacity: 0.7;
+}
+
+
+/* =================================
+   INSTAGRAM
+================================= */
+
+.instagram {
+    background: #dfe5db;
+
+    text-align: center;
+}
+
+.instagram-content {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.instagram-content h2 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.instagram-content p {
+    margin-bottom: 30px;
+
+    opacity: 0.75;
+}
+
+
+/* =================================
+   CONTACTO
+================================= */
+
+.contact {
+    text-align: center;
+}
+
+.contact .section-title {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-card {
+    max-width: 550px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    background: #eeece7;
+
+    border-radius: 20px;
+}
+
+.contact-card p {
+    margin-bottom: 15px;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    padding: 35px 10%;
+
+    text-align: center;
+
+    background: #303030;
+
+    color: white;
+
+    font-size: 0.9rem;
+
+    opacity: 0.95;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* =================================
+   RESPONSIVE / CELULAR
+================================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 130px 7% 80px;
+    }
+
+    .hero h1 {
+        font-size: 3.2rem;
+    }
+
+    .section {
+        padding: 80px 7%;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .button {
+        padding: 12px 22px;
+    }
+}
