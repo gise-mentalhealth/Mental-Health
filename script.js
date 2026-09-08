@@ -1,37 +1,14 @@
+document.getElementById("year").textContent = new Date().getFullYear();
 
+const animated = document.querySelectorAll(".section, .quote-section");
 
-console.log("Mental Health");
-
-const animatedElements = document.querySelectorAll(
-    ".section, .quote-section, .instagram-section"
-);
-
-
-const observer = new IntersectionObserver(
-
-    (entries) => {
-
-        entries.forEach((entry) => {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add("visible");
-
-            }
-
-        });
-
-    },
-
-    {
-        threshold: 0.12
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
     }
+  });
+}, { threshold: 0.08 });
 
-);
-
-
-animatedElements.forEach((element) => {
-
-    observer.observe(element);
-
-});
+animated.forEach((element) => observer.observe(element));
