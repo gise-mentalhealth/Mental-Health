@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gise-mentalhealth.github.io/Mental-Health/sitemap.xml
